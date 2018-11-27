@@ -16,6 +16,7 @@ public class Enemy extends GameObject {
 	protected int health = maxHealth;
 	protected double speed = 100;// + Math.random() * 10;
 	public int gold = 1;
+	protected boolean backFirst;
 
 
 	//for pathfinding
@@ -23,9 +24,10 @@ public class Enemy extends GameObject {
 	public int pathNode = 0;
 
 	//constructor for a 4x4 spritesheet
-	public Enemy(String image)
+	public Enemy(String image, boolean backFirst)
 	{
 		super(image, 4, 4);
+		this.backFirst = backFirst;
 	}
 
 
@@ -57,23 +59,17 @@ public class Enemy extends GameObject {
 			else
 				if( y < target.y) {
 					y += speed * elapsedTime;
-					direction = 3;
+					if (backFirst) direction = 0;
+					else direction = 3;
 				}
 				else {
 					y -= speed * elapsedTime;
-					direction = 0;
+					if (backFirst) direction = 3;
+					else direction = 0;
 				}
 
 			frame = direction * 4 + (int)((System.currentTimeMillis() / 100)%4);
 		}
-
-
-
-
-
-
-
-
 	}
 
 	/**

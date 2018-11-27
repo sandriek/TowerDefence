@@ -28,8 +28,6 @@ public class GameObject
 
 	public GameObject(String image, int sheetWidth, int sheetHeight)
 	{
-		this.x = x;
-		this.y = y;
 		this.frame = 0;
 		this.sheetWidth = sheetWidth;
 		this.sheetHeight = sheetHeight;

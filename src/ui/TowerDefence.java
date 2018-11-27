@@ -19,6 +19,8 @@ public class TowerDefence extends JPanel implements ActionListener, MouseListene
 	public Game game;
 	public COM com;
 
+
+
 	public TowerDefence() {
 		super();
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();

@@ -5,10 +5,10 @@ package game.enemies;
  */
 public class Wanderer extends Enemy {
 
-	public Wanderer() {
-		super("/enemies/wanderer.png");
-		this.speed = 100;
-		this.maxHealth = 100;
-		this.gold = 25;
-	}
+    public Wanderer() {
+        super("/enemies/Pokemon.png", true); //If your sprite sheet has the animation for walking back put true in after the image.
+        this.speed = 100;
+        this.maxHealth = 100;
+        this.gold = 25;
+    }
 }
